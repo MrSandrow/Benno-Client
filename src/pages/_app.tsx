@@ -1,4 +1,5 @@
 import { ChakraProvider, ColorModeProvider } from "@chakra-ui/react";
+import Head from "next/head";
 import theme from "../theme";
 
 function MyApp({ Component, pageProps }: any) {
@@ -9,6 +10,11 @@ function MyApp({ Component, pageProps }: any) {
           initialColorMode: "dark",
         }}
       >
+        <Head>
+          <title>Benno</title>
+          <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+        </Head>
+
         <Component {...pageProps} />
       </ColorModeProvider>
     </ChakraProvider>
